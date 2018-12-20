@@ -1,0 +1,15 @@
+/* AUTOMATICALLY GENERATED ON Mon Dec 10 21:15:10 BRST 2018*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebUserDataPermission "/";
+  permission javax.security.jacc.WebResourcePermission "/";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "", "**";
+  permission javax.security.jacc.WebRoleRefPermission "Radiação REST Service", "**";
+  permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+

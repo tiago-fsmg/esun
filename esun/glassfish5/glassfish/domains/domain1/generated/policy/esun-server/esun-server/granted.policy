@@ -1,0 +1,33 @@
+/* AUTOMATICALLY GENERATED ON Tue Dec 11 14:07:05 BRST 2018*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebUserDataPermission "/sistema/*:/sistema/administracao/*";
+  permission javax.security.jacc.WebUserDataPermission "/sistema/administracao/*";
+  permission javax.security.jacc.WebUserDataPermission "/:/sistema/administracao/*:/sistema/*";
+  permission javax.security.jacc.WebResourcePermission "/:/sistema/administracao/*:/sistema/*";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "", "**";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+
+grant      principal org.glassfish.security.common.Group "admin" {
+  permission javax.security.jacc.WebRoleRefPermission "default", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "", "admin";
+  permission javax.security.jacc.WebResourcePermission "/sistema/administracao/*";
+};
+
+grant      principal org.glassfish.security.common.Group "operador" {
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "operador";
+  permission javax.security.jacc.WebRoleRefPermission "", "operador";
+  permission javax.security.jacc.WebRoleRefPermission "default", "operador";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "operador";
+  permission javax.security.jacc.WebResourcePermission "/sistema/*:/sistema/administracao/*";
+};
+

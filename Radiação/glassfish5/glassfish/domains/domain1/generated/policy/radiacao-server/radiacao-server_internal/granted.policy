@@ -1,0 +1,21 @@
+/* AUTOMATICALLY GENERATED ON Mon Dec 10 21:15:07 BRST 2018*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoDAO", "update,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoDAO", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoServices", "loadByLatitudeLongitude,Local,java.lang.Double,java.lang.Double";
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoDAO", "getEntityManager,Local,";
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "Api", "test,Local,";
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoDAO", "save,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "Api", "getByLatitudeLongitude,Local,java.lang.Double,java.lang.Double";
+  permission javax.security.jacc.EJBMethodPermission "RadiacaoDAO", "loadAll,Local,";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "Api", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "RadiacaoDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "RadiacaoServices", "**";
+};
+
